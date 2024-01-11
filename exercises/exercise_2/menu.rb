@@ -10,11 +10,15 @@ class Menu
   end
 
   def display_menu
-    menu = []
-    @menu.each do |item|
-      menu << item.name
-    end
-    menu
+    # A less interesting, but probably more correct/elegant solution:
+    @menu.map(&:name)
+
+    # A More Fun Solution that manually does the same thing:
+    # menu = []
+    # @menu.each do |item|
+    #   menu << item.name
+    # end
+    # menu
   end
 
   def remove_dish(name)
